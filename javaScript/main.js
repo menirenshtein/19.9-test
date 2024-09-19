@@ -8,16 +8,25 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// url link
 const URL_link = "https://nbaserver-q21u.onrender.com/api/filter";
+// search player button
 const SEARCH_BTN = document.getElementById('search-player-btn');
+//points input
 const POINTS_INPUT = document.getElementById('points-input');
+// two percent input
 const TWO_PREC_INPUT = document.getElementById('twoPer-input');
+//three percent input
 const THREE_PREC_INPUT = document.getElementById('threePer-input');
+//position input
 const POSITION_INPUT = document.getElementById('select-input');
+// takes th table body
 const TABLE = document.getElementById('tbody');
+// add event to the search btn to put the plyers in the table
 SEARCH_BTN === null || SEARCH_BTN === void 0 ? void 0 : SEARCH_BTN.addEventListener('click', ((e) => {
     searchPlayers(e);
 }));
+// the function gets a player request body and turn it to a json and calls the table show function
 function getPlayerByBody(obj) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -32,7 +41,6 @@ function getPlayerByBody(obj) {
                 throw new Error('bla bla');
             }
             const DATA = yield RESPONSE.json();
-            // console.log(DATA)        
             showTable(DATA);
         }
         catch (error) {
@@ -40,8 +48,9 @@ function getPlayerByBody(obj) {
         }
     });
 }
-const a = { position: 'PG', twoPercent: 10, threePercent: 12, points: 1000 };
+// const a:PlayerReq = {position: 'PG', twoPercent: 10, threePercent: 12, points: 1000} 
 // getPlayerByBody(a)
+// the function gets array of players and create for each of them a table row
 function showTable(data) {
     return __awaiter(this, void 0, void 0, function* () {
         // debugger
@@ -76,6 +85,7 @@ function showTable(data) {
         });
     });
 }
+// the function reacts for event and search for a player by the inputs
 function searchPlayers(e) {
     return __awaiter(this, void 0, void 0, function* () {
         e.preventDefault();
@@ -86,9 +96,9 @@ function searchPlayers(e) {
             points: parseInt(POINTS_INPUT.value),
         };
         const a = yield getPlayerByBody(PLAYER);
-        const data = yield a;
     });
 }
+//the function add the player and puts he`s details to the mached card
 function addToCards(e, player) {
     return __awaiter(this, void 0, void 0, function* () {
         e.preventDefault();

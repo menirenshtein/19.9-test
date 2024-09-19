@@ -1,16 +1,27 @@
+// url link
 const URL_link: string = "https://nbaserver-q21u.onrender.com/api/filter"
+
+// search player button
 const SEARCH_BTN = document.getElementById('search-player-btn')
+
+//points input
 const POINTS_INPUT = document.getElementById('points-input') as HTMLInputElement 
+// two percent input
 const TWO_PREC_INPUT = document.getElementById('twoPer-input') as HTMLInputElement
+//three percent input
 const THREE_PREC_INPUT = document.getElementById('threePer-input') as HTMLInputElement
+//position input
 const POSITION_INPUT = document.getElementById('select-input') as HTMLSelectElement
+// takes th table body
 const TABLE = document.getElementById('tbody') as HTMLElement
 
-
+// add event to the search btn to put the plyers in the table
 SEARCH_BTN?.addEventListener('click', ((e)=>{
     searchPlayers(e)
 }))
 
+
+//interface of body request of player
 interface PlayerReq {
     position: string,
     twoPercent: number,
@@ -18,7 +29,7 @@ interface PlayerReq {
     points: number 
 }
 
-
+//interface of body response of player
 interface PlayerRes {
     position: string,
     twoPercent: number,
@@ -27,6 +38,7 @@ interface PlayerRes {
     playerName: string,
 }
 
+// the function gets a player request body and turn it to a json and calls the table show function
 async function getPlayerByBody(obj:PlayerReq) : Promise<PlayerRes[] | void> {
     try {
         const RESPONSE = await fetch(URL_link,{
@@ -40,16 +52,18 @@ async function getPlayerByBody(obj:PlayerReq) : Promise<PlayerRes[] | void> {
             throw new Error('bla bla')
         }
         const DATA = await RESPONSE.json()
-        // console.log(DATA)        
         showTable(DATA)
     } catch (error) {
         console.log('bla')
     }
 }
 
-const a:PlayerReq = {position: 'PG', twoPercent: 10, threePercent: 12, points: 1000} 
+
+// const a:PlayerReq = {position: 'PG', twoPercent: 10, threePercent: 12, points: 1000} 
 // getPlayerByBody(a)
 
+
+// the function gets array of players and create for each of them a table row
 async function showTable(data: PlayerRes[]) {
     // debugger
     TABLE.innerHTML = ""
@@ -92,7 +106,7 @@ async function showTable(data: PlayerRes[]) {
 }
 
 
-
+ // the function reacts for event and search for a player by the inputs
 async function searchPlayers(e:Event) {
     e.preventDefault();
     const PLAYER: PlayerReq = {
@@ -102,10 +116,11 @@ async function searchPlayers(e:Event) {
         points: parseInt(POINTS_INPUT.value),
     }
     const a = await getPlayerByBody(PLAYER)
-    const data = await a as PlayerRes[]
-
 }
 
+
+
+//the function add the player and puts he`s details to the mached card
 async function addToCards(e:Event, player:PlayerRes) {
     e.preventDefault();
    debugger
