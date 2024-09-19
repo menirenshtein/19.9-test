@@ -16,31 +16,40 @@
             <h1  > My fantasy Team</h1>
         </div>
         <div id="the-team-area">
-            <div class="player-card"  id="pg" ><h3 class="card-name">Points Guard</h3> </div>
-            <div class="player-card"  id="sg"><h3 class="card-name">Shooting Guard</h3> </div>
-            <div class="player-card"  id="sf"><h3 class="card-name">Small Forward</h3> </div>
-            <div class="player-card"  id="pf"><h3 class="card-name">Power Forward</h3> </div>
-            <div class="player-card"  id="c"><h3 class="card-name">Center</h3> </div>
+            <div class="player-card"  id="PG" >
+                <h4 class="card-name">Points Guard</h4> </div>
+            <div class="player-card"  id="SG">
+                <h4 class="card-name">Shooting Guard</h4> </div>
+            <div class="player-card"  id="SF">
+                <h4 class="card-name">Small Forward</h4> </div>
+            <div class="player-card"  id="PF">
+                <h4 class="card-name">Power Forward</h4> </div>
+            <div class="player-card"  id="C">
+                <h4 class="card-name">Center</h4> </div>
         </div>
         <section id="team-section">
 
             <form id="form">
-                <select>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                <select id="select-input">
+                    <option value="PG">PG</option>
+                    <option value="SG">SG</option>
+                    <option value="SF">SF</option>
+                    <option value="PF">PF</option>
+                    <option value="C">C</option>
                 </select>
                 
-                <input type="range" min="0" max="20000" id="points-input"  >
+                <input type="range" min="0" max="20000" id="points-input" value="1" oninput="this.nextElementSibling.value = this.value;">
+                <output name="result" class="label" for="points-input" >1</output>
                 
-                <input type="range" min="0" max="100" id="twoPer-input" >
+                <input type="range" min="0" max="100" id="twoPer-input" value="1" oninput="this.nextElementSibling.value = this.value;" >
+                <output name="result" class="label" for="points-input" >1</output>
                 
-                <input type="range" min="0" max="100" id="threePer-input">
+                <input type="range" min="0" max="100" id="threePer-input" value="1" oninput="this.nextElementSibling.value = this.value;" >
+                <output name="result" class="label" for="points-input" >1</output>
                 
                 <button id="search-player-btn" > Search Players</button>
                 
+            </form>
                 <table id="table">
                     <thead>
                         <tr>
@@ -56,7 +65,6 @@
                         
                     </tbody>
                 </table>
-            </form>
         </section>
     </main>
     <script src="javaScript/main.js"></script>

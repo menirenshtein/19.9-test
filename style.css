@@ -34,6 +34,10 @@ main{
     align-items: center;
     text-align: center;
     justify-content: center;
+    width: 50%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
 }
 
 #head-line{
@@ -48,17 +52,21 @@ main{
     flex-direction:  row;
     align-items: center;
     justify-content: center;
+    justify-self: center;
     margin-top: 30px;
+    margin-left: 0px;
 }
 #team-section{
     background-color:#F0F0F0 ;
-    width: 700px;
+    width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 25px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+
 }
 
 select{
@@ -70,14 +78,14 @@ input{
     width: 75%;
     margin-left: 40px;
     margin-top: 10px;
-    ;
+    border: 1px, solid, black;
 }
 
 #search-player-btn{
     width: 29%;
     text-align: center;
     align-self: center;
-    height: 30px;
+    height: 40px;
     background-color: #17408B;
     color: white;
     margin: 20px;
@@ -85,18 +93,23 @@ input{
 }
 
 .player-card{
-    width: 90px;
+    width: 170px;
+    height: 200px;
     background-color: #F0F0F0;
-    margin-left: 30px;
+    margin-left: 20px;
     text-align: center;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+
 
 }
 #table{
     width: 80%;
     justify-content: center;
     background-color: lightgray;
-   
+    margin-bottom: 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+
 }
 
 table, th{
@@ -104,7 +117,8 @@ table, th{
     border-collapse: collapse;
     background-color: #C9082A;
     color: white;
-    height:  15px;
+    width: 70px;
+    height:  45px;
 }
 
 table, td{
@@ -113,9 +127,39 @@ table, td{
     border-collapse: collapse;
     border: 1px, solid, black;
     padding: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
 
 }
 
 .card-name{
     color: #17408B;
+    
+}
+
+
+button{
+    border-radius: 5px;
+    color: white;
+    background-color: #17408B;
+    padding: 2px;
+    width: 90%;
+}
+
+.label{
+    left: 0px;
+    background-color: black;
+    border: 1px, solid, black;
+    color: wheat;
+    height: 30px;
+    width: 60px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-self: baseline;
 }

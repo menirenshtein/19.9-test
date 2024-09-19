@@ -15,3 +15,14 @@ html page
         the square of action have a button that contain a button 
 
 
+ts
+    const`s
+    event listeners
+    getPlayerByBody gets a player and returns all the playyers in the same resukts
+
+    showTable gets plyers[] and put them in the table in a foreach
+
+    searchPlayers create an player object and call the getPlayerByBody function
+
+
+    addToCards enter the player from the table to the card
