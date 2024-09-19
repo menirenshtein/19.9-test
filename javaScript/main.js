@@ -98,12 +98,24 @@ function searchPlayers(e) {
         const a = yield getPlayerByBody(PLAYER);
     });
 }
+const a = {
+    PG: "Points Guard",
+    SG: "Shooting Guard",
+    SF: "Small Forward",
+    PF: "Power Forward",
+    C: "Center"
+};
 //the function add the player and puts he`s details to the mached card
 function addToCards(e, player) {
     return __awaiter(this, void 0, void 0, function* () {
         e.preventDefault();
         debugger;
         const div = document.getElementById(player.position.toString());
+        div.innerHTML = '';
+        const headLine = document.createElement('h4');
+        headLine.innerText = `${player.position.toString()}`;
+        headLine.style.color = '#17408B';
+        div === null || div === void 0 ? void 0 : div.appendChild(headLine);
         const name = document.createElement('h4');
         name.innerText = `${player.playerName.toString()} `;
         div === null || div === void 0 ? void 0 : div.appendChild(name);

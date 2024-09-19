@@ -119,13 +119,25 @@ async function searchPlayers(e:Event) {
 }
 
 
-
+const a:object = {
+    PG: "Points Guard",
+    SG: "Shooting Guard", 
+    SF: "Small Forward",
+    PF: "Power Forward",
+    C: "Center"
+}
 //the function add the player and puts he`s details to the mached card
 async function addToCards(e:Event, player:PlayerRes) {
     e.preventDefault();
    debugger
-    const div = document.getElementById(player.position.toString())
 
+    const div = document.getElementById(player.position.toString())
+    div!.innerHTML = ''
+
+    const headLine = document.createElement('h4')
+    headLine.innerText = `${player.position.toString()}`;
+    headLine.style.color = '#17408B'
+    div?.appendChild(headLine)
 
     const name = document.createElement('h4')
     name.innerText = `${player.playerName.toString()} `

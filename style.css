@@ -116,6 +116,7 @@ table, th{
     border: 1px solid ;
     border-collapse: collapse;
     background-color: #C9082A;
+    border: 1px, solid, black;
     color: white;
     width: 70px;
     height:  45px;
