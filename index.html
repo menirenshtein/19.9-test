@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1 id="jock"> </h1>
+        <div id="head-line">
+            <h1 id="season-note">NBA FANTASY 2014-2024</h1>
+        </div>
+        <div id="team-note">
+            <h1  > My fantasy Team</h1>
+        </div>
+        <div id="the-team-area">
+            <div class="player-card"  id="pg" ><h3 class="card-name">Points Guard</h3> </div>
+            <div class="player-card"  id="sg"><h3 class="card-name">Shooting Guard</h3> </div>
+            <div class="player-card"  id="sf"><h3 class="card-name">Small Forward</h3> </div>
+            <div class="player-card"  id="pf"><h3 class="card-name">Power Forward</h3> </div>
+            <div class="player-card"  id="c"><h3 class="card-name">Center</h3> </div>
+        </div>
+        <section id="team-section">
+
+            <form id="form">
+                <select>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                
+                <input type="range" min="0" max="20000" id="points-input"  >
+                
+                <input type="range" min="0" max="100" id="twoPer-input" >
+                
+                <input type="range" min="0" max="100" id="threePer-input">
+                
+                <button id="search-player-btn" > Search Players</button>
+                
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Position</th>
+                            <th>Points</th>
+                            <th>FG%</th>
+                            <th>3P%</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </form>
+        </section>
+    </main>
+    <script src="javaScript/main.js"></script>
+</body>
+</html>

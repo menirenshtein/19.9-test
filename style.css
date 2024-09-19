@@ -1,0 +1,121 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+}
+#season-note{
+    text-align: center;
+    font-size: 15px;
+}
+
+#team-note{
+    margin-top: 0 auto;
+    width: 100%;
+    /* background-color: #17408B; */
+    color: #17408B;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font:bolder;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#head-line{
+    margin-top: 0 auto;
+    width: 100%;
+    background-color: #17408B;
+    color: white;
+}
+
+#the-team-area{
+    display:  flex;
+    flex-direction:  row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+#team-section{
+    background-color:#F0F0F0 ;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    border-radius: 5px;
+}
+
+select{
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 75%;
+}
+input{
+    width: 75%;
+    margin-left: 40px;
+    margin-top: 10px;
+    ;
+}
+
+#search-player-btn{
+    width: 29%;
+    text-align: center;
+    align-self: center;
+    height: 30px;
+    background-color: #17408B;
+    color: white;
+    margin: 20px;
+    text-align: center;
+}
+
+.player-card{
+    width: 90px;
+    background-color: #F0F0F0;
+    margin-left: 30px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+#table{
+    width: 80%;
+    justify-content: center;
+    background-color: lightgray;
+   
+}
+
+table, th{
+    border: 1px solid ;
+    border-collapse: collapse;
+    background-color: #C9082A;
+    color: white;
+    height:  15px;
+}
+
+table, td{
+    background-color: #E8E8E8;
+    color: black;
+    border-collapse: collapse;
+    border: 1px, solid, black;
+    padding: 5px;
+
+}
+
+.card-name{
+    color: #17408B;
+}
